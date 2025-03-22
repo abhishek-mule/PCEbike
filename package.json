@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "servor --reload",
+    "dev": "servor --reload"
+  },
+  "dependencies": {
+    "servor": "^4.0.2",
+    "swiper": "^11.0.5",
+    "flatpickr": "^4.6.13",
+    "sweetalert2": "^11.10.1"
+  }
+}

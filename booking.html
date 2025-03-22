@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bike - Booking</title>
+  <link rel="stylesheet" href="booking-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+          <path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+        </svg>
+        <span>PCEbike</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="home.html" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-link active">
+          <i class="fas fa-bicycle"></i>
+          <span>Booking</span>
+        </a>
+        <a href="rules.html" class="nav-link">
+          <i class="fas fa-book"></i>
+          <span>Rules & Terms</span>
+        </a>
+        <a href="member.html" class="nav-link">
+          <i class="fas fa-user-plus"></i>
+          <span>Become a member</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h1>Book a Bike</h1>
+      </header>
+      <div class="content">
+        <div class="progress-chain" data-step="0">
+          <div class="progress-step active">
+            <div class="step-icon">
+              <i class="fas fa-bicycle"></i>
+            </div>
+            <span>Select Bike</span>
+          </div>
+          <div class="progress-step">
+            <div class="step-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <span>Personal Details</span>
+          </div>
+          <div class="progress-step">
+            <div class="step-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <span>Choose Time</span>
+          </div>
+          <div class="progress-step">
+            <div class="step-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <span>Confirm</span>
+          </div>
+        </div>
+
+        <div class="bike-section">
+          <h2 class="section-title">Available Bikes</h2>
+          
+          <div class="swiper bike-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-type="classic">
+                <div class="bike-card">
+                  <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e" alt="Classic Bike">
+                  <h3>Classic Bike</h3>
+                  <p>Perfect for casual rides and everyday commuting. Comfortable and reliable.</p>
+                  <div class="bike-details">
+                    <span><i class="fas fa-clock"></i> 2h minimum</span>
+                    <span><i class="fas fa-tag"></i> $10/hour</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-type="city">
+                <div class="bike-card">
+                  <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7" alt="City Bike">
+                  <h3>City Bike</h3>
+                  <p>Ideal for urban commuting with added features for city navigation.</p>
+                  <div class="bike-details">
+                    <span><i class="fas fa-clock"></i> 1h minimum</span>
+                    <span><i class="fas fa-tag"></i> $12/hour</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-type="folding">
+                <div class="bike-card">
+                  <img src="https://images.deepai.org/art-image/abd32d1757bc4900ae7ee30ee1285e19/a-folding-bike-is-a-bicycle-designed-to-fold-into-a-c.jpg" alt="Folding Bike">
+                  <h3>Folding Bike</h3>
+                  <p>Compact and convenient, perfect for mixed-mode commuting.</p>
+                  <div class="bike-details">
+                    <span><i class="fas fa-clock"></i> 2h minimum</span>
+                    <span><i class="fas fa-tag"></i> $15/hour</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="bike-type-filter">
+            <button class="filter-btn active" data-filter="all">All Bikes</button>
+            <button class="filter-btn" data-filter="classic">Classic</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="folding">Folding</button>
+          </div>
+        </div>
+
+        <div class="cyclist-section" style="display: none;">
+          <h2 class="section-title">Personal Details</h2>
+          <form class="cyclist-form">
+            <div class="form-group">
+              <label for="firstName"><i class="fas fa-user"></i> First Name</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName"><i class="fas fa-user"></i> Last Name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+              <label for="mobile"><i class="fas fa-phone"></i> Mobile Number</label>
+              <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" placeholder="Enter your mobile number">
+            </div>
+            <div class="form-group">
+              <label for="address"><i class="fas fa-map-marker-alt"></i> Address</label>
+              <textarea id="address" name="address" required rows="3" placeholder="Enter your full address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="collegeName"><i class="fas fa-university"></i> College Name</label>
+              <select id="collegeName" name="collegeName" required>
+                <option value="">Select College</option>
+                <option value="PCE">Priyadarshini College of Engineering</option>
+                <option value="PCOE">G.H Raisoni College of Education</option>
+                <option value="PCEM">YCCE College of Engineering & Management</option>
+                <option value="PCCOE">KDK College of Engineering</option>
+                <option value="VJTI">Veermata Jijabai Technological Institute</option>
+                <option value="SPIT">Vishveshwariya nationalInstitute of Technology</option>
+                <option value="KJSCE">Ramdeobaba College of Engineering</option>
+                <option value="DJSCE">Dwarkadas J. Sanghvi College of Engineering</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="collegeErp"><i class="fas fa-id-card"></i> College ERP</label>
+              <input type="text" id="collegeErp" name="collegeErp" required pattern="[0-9]+" title="Please enter a valid ERP number" placeholder="Enter your college ERP number">
+            </div>
+            <div class="form-group">
+              <label for="room"><i class="fas fa-door-open"></i> Room Number</label>
+              <input type="text" id="room" name="room" required pattern="[0-9]+" title="Please enter a valid room number" placeholder="Enter your room number">
+            </div>
+          </form>
+        </div>
+
+        <div class="time-section" style="display: none;">
+          <h2 class="section-title">Choose Date & Time</h2>
+          <form class="time-form">
+            <div class="form-group">
+              <label for="bookingDate"><i class="fas fa-calendar"></i> Select Date</label>
+              <input type="text" id="bookingDate" name="bookingDate" required>
+            </div>
+            <div class="form-group">
+              <label for="startTime"><i class="fas fa-clock"></i> Start Time</label>
+              <input type="text" id="startTime" name="startTime" required>
+            </div>
+            <div class="form-group">
+              <label for="duration"><i class="fas fa-hourglass-half"></i> Duration (hours)</label>
+              <select id="duration" name="duration" required>
+                <option value="1">1 hour</option>
+                <option value="2">2 hours</option>
+                <option value="3">3 hours</option>
+                <option value="4">4 hours</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="confirm-section" style="display: none;">
+          <h2 class="section-title">Confirm Booking</h2>
+          <div class="booking-summary">
+            <div class="summary-section">
+              <h3><i class="fas fa-user"></i> Personal Details</h3>
+              <div id="personalDetails"></div>
+            </div>
+            <div class="summary-section">
+              <h3><i class="fas fa-bicycle"></i> Bike Details</h3>
+              <div id="bikeDetails"></div>
+            </div>
+            <div class="summary-section">
+              <h3><i class="fas fa-clock"></i> Time Details</h3>
+              <div id="timeDetails"></div>
+            </div>
+            
+            <div class="approval-timer">
+              <h3><i class="fas fa-hourglass-half"></i> Approval Timer</h3>
+              <p>Your booking needs to be approved within: <span id="approvalTimer" class="timer">15:00</span></p>
+              <p class="timer-note">If not approved within this time, the booking will be automatically cancelled.</p>
+            </div>
+
+            <div class="next-steps">
+              <h3><i class="fas fa-list"></i> Next Steps</h3>
+              <ul>
+                <li>Wait for booking approval</li>
+                <li>Check your mobile for confirmation</li>
+                <li>Visit the bike station at your scheduled time</li>
+                <li>Present your booking ID and college ID</li>
+              </ul>
+            </div>
+
+            <div class="quick-actions">
+              <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+              <div class="action-buttons">
+                <a href="rules.html" class="action-btn">
+                  <i class="fas fa-book"></i> See the Rules
+                </a>
+                <a href="home.html" class="action-btn">
+                  <i class="fas fa-home"></i> Go to Home Page
+                </a>
+              </div>
+            </div>
+
+            <div class="terms-section">
+              <label class="terms-checkbox">
+                <input type="checkbox" required id="termsAccept">
+                <span>I agree to the <a href="rules.html" class="terms-link">Terms and Conditions</a> and understand that I am responsible for the bike during the rental period.</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <a href="home.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Return
+          </a>
+          <button class="btn btn-primary" onclick="nextStep()">
+            Next <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="booking.js"></script>
+</body>
+</html>

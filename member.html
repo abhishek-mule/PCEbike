@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCEpark - Become a Member</title>
+  <link rel="stylesheet" href="member-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+          <path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+        </svg>
+        <span>PCEpark</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="home.html" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="booking.html" class="nav-link">
+          <i class="fas fa-bicycle"></i>
+          <span>Booking</span>
+        </a>
+        <a href="rules.html" class="nav-link">
+          <i class="fas fa-book"></i>
+          <span>Rules & Terms</span>
+        </a>
+        <a href="#" class="nav-link active">
+          <i class="fas fa-user-plus"></i>
+          <span>Become a member</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h1>Become a Member</h1>
+      </header>
+      <div class="content">
+        <section class="membership-section">
+          <h2 class="section-title">Choose Your Membership Plan</h2>
+          <div class="membership-grid">
+            <div class="membership-card">
+              <div class="popular-tag">Most Popular</div>
+              <h3 class="plan-name">Basic Plan</h3>
+              <div class="plan-price">₹499</div>
+              <div class="plan-duration">per month</div>
+              <ul class="plan-features">
+                <li>Unlimited bike rentals</li>
+                <li>Standard booking window</li>
+                <li>Regular support hours</li>
+                <li>Basic insurance coverage</li>
+                <li>Access to community events</li>
+              </ul>
+              <a href="#registrationSection" class="btn btn-secondary">Select Plan</a>
+            </div>
+
+            <div class="membership-card featured">
+              <h3 class="plan-name">Premium Plan</h3>
+              <div class="plan-price">₹899</div>
+              <div class="plan-duration">per month</div>
+              <ul class="plan-features">
+                <li>All Basic Plan features</li>
+                <li>Priority booking window</li>
+                <li>24/7 premium support</li>
+                <li>Enhanced insurance coverage</li>
+                <li>Exclusive member events</li>
+                <li>Free maintenance checks</li>
+              </ul>
+              <a href="#registrationSection" class="btn btn-primary">Select Plan</a>
+            </div>
+
+            <div class="membership-card">
+              <div class="special-tag">Best Value</div>
+              <h3 class="plan-name">Student Special</h3>
+              <div class="plan-price">₹299</div>
+              <div class="plan-duration">per month</div>
+              <ul class="plan-features">
+                <li>Valid student ID required</li>
+                <li>Limited to 20 rides/month</li>
+                <li>Standard support hours</li>
+                <li>Basic insurance coverage</li>
+                <li>Student community access</li>
+              </ul>
+              <a href="#registrationSection" class="btn btn-secondary">Select Plan</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="registrationSection" class="registration-section">
+          <h2 class="section-title">Complete Your Registration</h2>
+          <form id="membershipForm" class="registration-form">
+            <input type="hidden" id="selectedPlan" name="selectedPlan">
+            
+            <div class="form-group">
+              <label for="fullName">
+                <i class="fas fa-user"></i> Full Name *
+              </label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i> Email Address *
+              </label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">
+                <i class="fas fa-phone"></i> Phone Number *
+              </label>
+              <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+              <label for="college">
+                <i class="fas fa-university"></i> College *
+              </label>
+              <select id="college" name="college" required>
+                <option value="">Select your college</option>
+                <option value="PCE">Pillai College of Engineering</option>
+                <option value="PCOE">Pillai College of Education</option>
+                <option value="PCEM">Pillai College of Engineering & Management</option>
+                <option value="PCCOE">Pimpri Chinchwad College of Engineering</option>
+                <option value="VJTI">Veermata Jijabai Technological Institute</option>
+                <option value="SPIT">Sardar Patel Institute of Technology</option>
+                <option value="KJSCE">K. J. Somaiya College of Engineering</option>
+                <option value="DJSCE">Dwarkadas J. Sanghvi College of Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="studentId">
+                <i class="fas fa-id-card"></i> Student ID/Roll Number *
+              </label>
+              <input type="text" id="studentId" name="studentId" required placeholder="Enter your student ID or roll number">
+            </div>
+
+            <div class="form-group terms-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                <span>I agree to the <a href="rules.html">Terms and Conditions</a> and understand the membership rules</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              Complete Registration
+            </button>
+          </form>
+        </section>
+
+        <section class="requirements-section">
+          <h2 class="section-title">Membership Requirements</h2>
+          <div class="requirements-grid">
+            <div class="requirement-card">
+              <i class="fas fa-id-card"></i>
+              <h3>Valid ID</h3>
+              <p>Current college ID or government-issued identification required for verification.</p>
+            </div>
+
+            <div class="requirement-card">
+              <i class="fas fa-user-check"></i>
+              <h3>Age Requirement</h3>
+              <p>Must be 18 years or older to apply for membership.</p>
+            </div>
+
+            <div class="requirement-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Contact Information</h3>
+              <p>Active mobile number and email address for communications.</p>
+            </div>
+
+            <div class="requirement-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Safety Agreement</h3>
+              <p>Completion of safety orientation and agreement to terms.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I sign up for membership?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Simply choose your preferred plan, complete the online registration form, and submit the required documents. Our team will verify your information within 24 hours.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I change my membership plan?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes, you can upgrade or downgrade your membership plan at any time. Changes will take effect from the next billing cycle.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What's included in the insurance coverage?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Our basic insurance covers accidents and third-party liability. Premium plans include additional coverage for personal injuries and enhanced bike damage protection.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I cancel my membership?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              You can cancel your membership anytime through your account settings or by contacting our support team. A 30-day notice is required for cancellation.
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="member.js"></script>
+</body>
+</html>
